@@ -21,7 +21,6 @@ const TEMPLATE = `---
 title: ${name}
 theme: uncover
 paginate: true
-backgroundColor: #fff
 ---
 
 # ${name}
