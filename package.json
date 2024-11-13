@@ -1,0 +1,14 @@
+{
+  "name": "slides",
+  "scripts": {
+    "create": "./scripts/create.sh",
+    "serve": "marp -s -I ."
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "4.0.3",
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "5.0.0"
+  }
+}
