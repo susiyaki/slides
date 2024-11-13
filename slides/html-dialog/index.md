@@ -1,8 +1,7 @@
 ---
 title: html-dialog
-theme: uncover
+theme: rose-pine-moon
 paginate: true
-backgroundColor: #fff
 ---
 
 # html-dialog
