@@ -1,7 +1,7 @@
+import { exec, execSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import open from "open";
-import { execSync, exec } from "node:child_process";
 import { selectOption } from "./selectOptions";
 
 const PORT = 8080;
@@ -36,7 +36,9 @@ const indexContent = fs.readFileSync(indexFile, "utf-8");
 const themeRegex = new RegExp("theme: (.*)");
 const theme = indexContent.match(themeRegex)?.[1];
 
-const themeFile = theme ? path.join(__dirname, "../theme", `${theme}.css`) : null;
+const themeFile = theme
+  ? path.join(__dirname, "../theme", `${theme}.css`)
+  : null;
 
 if (themeFile && !fs.existsSync(themeFile)) {
   console.error("Theme not found");
@@ -45,21 +47,20 @@ if (themeFile && !fs.existsSync(themeFile)) {
 
 console.log(`Using theme: ${theme}`);
 
-const themeOption = theme ? `--theme ${path.join(__dirname, "../theme", `${theme}.css`)}` : "";
+const themeOption = theme
+  ? `--theme ${path.join(__dirname, "../theme", `${theme}.css`)}`
+  : "";
 
 console.log("\nStarting server...");
-
 
 const command = `marp -s ${themeOption} -I ${path.join(__dirname, "../slides", selected)}`;
 
 try {
   open(URL);
   execSync(command, {
-    stdio: 'inherit',
+    stdio: "inherit",
     env: { ...process.env, PORT: PORT.toString() },
   });
 } catch (error) {
-  console.error('Error:', error);
+  console.error("Error:", error);
 }
-
-
