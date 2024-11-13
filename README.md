@@ -6,8 +6,6 @@
 bun run create <slide-name>
 ```
 
-In slide directory,
-
 ```bash
 bun run serve
 ```
