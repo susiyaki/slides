@@ -18,6 +18,7 @@ if (fs.existsSync(dir)) {
 fs.mkdirSync(dir);
 
 const TEMPLATE = `---
+marp: true
 title: ${name}
 theme: uncover
 paginate: true
