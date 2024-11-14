@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { THEME_FILE_PATHS } from "../../theme/constants";
 import { selectOption } from "./selectOptions";
 
 export const getSlideData = async () => {
@@ -32,7 +33,7 @@ export const getSlideData = async () => {
   const themeName = slideContent.match(themeRegex)?.[1];
 
   const themeFilePath = themeName
-    ? path.join(__dirname, "../../theme", `${themeName}.css`)
+    ? THEME_FILE_PATHS?.[themeName as keyof typeof THEME_FILE_PATHS]
     : null;
 
   if (themeFilePath && !fs.existsSync(themeFilePath)) {
