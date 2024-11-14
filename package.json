@@ -1,6 +1,7 @@
 {
 	"name": "slides",
 	"scripts": {
+    "build": "bun run ./scripts/build.ts",
 		"create": "bun run ./scripts/create.ts",
 		"fix": "npm-run-all2 fix:*",
 		"fix:md": "bun run lint:md --fix",
