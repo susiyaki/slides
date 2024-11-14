@@ -1,0 +1,3 @@
+[submodule "theme/wave"]
+	path = theme/wave
+	url = git@github.com:JuliusWiedemann/MarpThemeWave.git

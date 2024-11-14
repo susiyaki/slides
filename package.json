@@ -1,12 +1,13 @@
 {
 	"name": "slides",
 	"scripts": {
+    "build": "bun run ./scripts/build.ts",
 		"create": "bun run ./scripts/create.ts",
 		"fix": "npm-run-all2 fix:*",
 		"fix:md": "bun run lint:md --fix",
 		"fix:biome": "bun run lint:biome --fix",
 		"lint": "npm-run-all2 lint:*",
-		"lint:md": "markdownlint '**/*.md' --ignore node_modules --config .markdownlint.yaml",
+		"lint:md": "markdownlint '**/*.md' --ignore node_modules --ignore theme --config .markdownlint.yaml",
 		"lint:biome": "biome check",
 		"prepare": "husky || true",
 		"serve": "bun run ./scripts/serve.ts"
