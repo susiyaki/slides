@@ -1,0 +1,16 @@
+{
+  "name": "lt-6-18",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@slidev/cli": "^52.16.0",
+    "@slidev/theme-default": "^0.25.0",
+    "@slidev/theme-seriph": "^0.25.0",
+    "@types/bun": "latest",
+    "playwright-chromium": "^1.60.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
